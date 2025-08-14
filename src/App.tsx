@@ -11,7 +11,7 @@ import RequestDelivery from "./pages/RequestDelivery";
 import FindDeliveries from "./pages/FindDeliveries";
 import MyRequests from "./pages/MyRequests";
 import MyDeliveries from "./pages/MyDeliveries"; // ✅ Real component
-import Profile from "./pages/profile";
+import Profile from "./pages/Profile";
 function App() {
   return (
     <>
