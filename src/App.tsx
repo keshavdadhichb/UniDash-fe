@@ -12,6 +12,7 @@ import FindDeliveries from "./pages/FindDeliveries";
 import MyRequests from "./pages/MyRequests";
 import MyDeliveries from "./pages/MyDeliveries"; // ✅ Real component
 import Profile from "./pages/Profile";
+import LoginError from "./pages/LoginError";
 function App() {
   return (
     <>
@@ -27,6 +28,7 @@ function App() {
         <ProtectedRoute path="/my-requests" component={MyRequests} />
         <ProtectedRoute path="/my-deliveries" component={MyDeliveries} />
         <ProtectedRoute path="/profile" component={Profile} />
+         <Route path="/login-error" component={LoginError} />
 
         {/* Fallback route */}
         <Route>404: Page Not Found!</Route>
