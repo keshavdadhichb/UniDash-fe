@@ -1,10 +1,10 @@
 import { useUser } from '../hooks/useUser';
 import { Link } from 'wouter';
 import { PackagePlus, Map, ClipboardList, Truck } from 'lucide-react';
-import { motion, Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
+import type { Variants } from 'framer-motion'; // <-- THE FIX IS HERE
 import './Dashboard.css';
 
-// Add the ': Variants' type annotation to fix the build error
 const cardVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: { 
@@ -24,8 +24,17 @@ const Dashboard = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <h1>Welcome back, {user?.name.split(' ')[0]}!</h1>
-        <p>What would you like to do today?</p>
+        <div className="header-content">
+          <div>
+            <h1>Welcome back, {user?.name.split(' ')[0]}!</h1>
+            <p>What would you like to do today?</p>
+          </div>
+          <Link href="/profile">
+            <a className="profile-button">
+              My Profile
+            </a>
+          </Link>
+        </div>
       </motion.header>
       
       <motion.main 
