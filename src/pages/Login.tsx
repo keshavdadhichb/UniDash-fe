@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import "./login.css"
+import "./Login.css"
 
 export default function Login() {
   const [isLoading, setIsLoading] = useState(false)
