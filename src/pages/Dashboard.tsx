@@ -1,12 +1,17 @@
 import { useUser } from '../hooks/useUser';
 import { Link } from 'wouter';
-import { PackagePlus, Map, ClipboardList, Truck, User } from 'lucide-react'; // Import User icon
-import { motion } from 'framer-motion';
+import { PackagePlus, Map, ClipboardList, Truck } from 'lucide-react';
+import { motion, Variants } from 'framer-motion';
 import './Dashboard.css';
 
-const cardVariants = {
+// Add the ': Variants' type annotation to fix the build error
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100 } },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { type: 'spring', stiffness: 100 } 
+  },
 };
 
 const Dashboard = () => {
@@ -19,19 +24,8 @@ const Dashboard = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <div className="header-content">
-          <div>
-            <h1>Welcome back, {user?.name.split(' ')[0]}!</h1>
-            <p>What would you like to do today?</p>
-          </div>
-          {/* THIS IS THE NEW PROFILE BUTTON */}
-          <Link href="/profile">
-            <a className="profile-button">
-              <User size={18} />
-              My Profile
-            </a>
-          </Link>
-        </div>
+        <h1>Welcome back, {user?.name.split(' ')[0]}!</h1>
+        <p>What would you like to do today?</p>
       </motion.header>
       
       <motion.main 
@@ -40,7 +34,6 @@ const Dashboard = () => {
         animate="visible"
         transition={{ staggerChildren: 0.1 }}
       >
-        {/* The four action cards remain the same */}
         <Link href="/request-delivery">
           <motion.a className="action-card" variants={cardVariants}>
             <PackagePlus size={40} className="icon" />
