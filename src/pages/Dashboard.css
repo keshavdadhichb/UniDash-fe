@@ -1,0 +1,98 @@
+.dashboard-header {
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+/* New wrapper to position the button */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allows button to wrap on small screens */
+    gap: 20px;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  color: var(--text-color);
+}
+
+.dashboard-header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* New profile button style */
+.profile-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow);
+}
+
+.profile-button:hover {
+    border-color: var(--primary-gold);
+    color: var(--primary-gold);
+    transform: translateY(-2px);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.action-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 30px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: var(--text-color);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  
+  /* FIX: Align icons and text properly */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.action-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-gold);
+}
+
+.action-card .icon {
+  color: var(--primary-gold);
+  margin-bottom: 15px;
+}
+
+.action-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.action-card p {
+  color: #718096; /* A softer gray */
+}
+
+/* RESPONSIVENESS: Stack cards on smaller screens */
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-header h1 {
+    font-size: 2rem;
+  }
+}

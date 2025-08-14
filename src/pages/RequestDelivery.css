@@ -1,0 +1,164 @@
+/* Main Form Card */
+.request-form {
+  background: var(--card-bg);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
+  padding: 30px 40px;
+  color: var(--text-color);
+  max-width: 700px;
+  margin: 20px auto 40px; /* Add margin at the bottom */
+}
+
+/* Form Step Sections (e.g., "1. What are we delivering?") */
+.form-step {
+  margin-bottom: 40px;
+}
+
+.form-step:last-of-type {
+    margin-bottom: 20px;
+}
+
+.form-step h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+/* Modern Input Fields */
+input[type="text"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: #fdfdff;
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-gold);
+  box-shadow: 0 0 0 3px rgba(201, 164, 46, 0.15);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.error-message {
+  color: #e53e3e;
+  font-size: 0.875rem;
+  margin-top: 5px;
+}
+
+/* Pill-style Toggles */
+.delivery-toggle {
+  display: flex;
+  background-color: #e2e8f0;
+  border-radius: 8px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.delivery-toggle button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #4a5568;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.delivery-toggle button.active {
+  background-color: var(--primary-gold);
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.radio-group-pills {
+  display: flex;
+  gap: 10px;
+}
+
+.radio-group-pills button {
+  flex: 1;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #4a5568;
+}
+
+.radio-group-pills button.active {
+  background-color: var(--primary-gold-dark);
+  border-color: var(--primary-gold-dark);
+  color: white;
+}
+
+/* Conditional Hostel Fields Layout */
+.hostel-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+/* Submit Button */
+.submit-button {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: var(--primary-gold);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.submit-button:hover {
+  background-color: var(--primary-gold-dark);
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .request-form {
+    padding: 20px;
+  }
+  .hostel-fields {
+    grid-template-columns: 1fr;
+  }
+}

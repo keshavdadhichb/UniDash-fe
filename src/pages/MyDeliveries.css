@@ -1,0 +1,59 @@
+.deliveries-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.delivery-card {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #444;
+}
+
+.delivery-card h3 {
+  color: #c9a42e;
+  margin-bottom: 15px;
+}
+
+.delivery-card p {
+  margin-bottom: 8px;
+  color: #ccc;
+}
+.delivery-card a {
+  color: #4285f4;
+  text-decoration: none;
+}
+
+.otp-form {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.otp-form input {
+  flex-grow: 1;
+  padding: 10px;
+  background-color: #333;
+  border: 1px solid #555;
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+}
+
+.otp-form button {
+  padding: 10px 20px;
+  background-color: #34a853;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.otp-form button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
